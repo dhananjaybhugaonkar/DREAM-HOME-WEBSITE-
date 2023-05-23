@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"type="text/css"href="{{url_for('static',filename='css/style.css')}}">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="static/css/loginStyle.css" rel="stylesheet">
+    </head>
+  <body class="bg-nav">
+
+
+    <header class="header" id="header">
+      <div class="navigation">
+        <div class="nav-center container d-flex">
+          <a href="/" class="logo"><h1>DREAM HOME</h1></a>
+
+
+
+
+
+          
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="Login" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="AddtoMail" class="nav-link">Join</a>
+            </li>
+            <li class="nav-item">
+              <a href="BookView" class="nav-link">Book</a>
+            </li>
+            <li class="nav-item">
+              <a href="Rentals" class="nav-link">Rentals</a>
+            </li>
+            <li class="nav-item">
+              <a href="signout" class="nav-link">Sign Out</a>
+            </li>
+
+          <div class="hamburger">
+            <i class="bx bx-menu-alt-left"></i>
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </header>
+    
+
+    <section class = "section rent">
+    
+      <div align="center">
+          <h1> Book a Viewing <br>
+          <div><br></div></h1>
+          {%if not logged%}
+          <p>You aren't logged in...</p>
+          <p>Please click <a href="/Login">Here</a> To log in!</p> 
+          {%else%}
+          <form method="post">
+           
+             <table id="agentsAdd">
+  
+             <tr>
+              <td>Property No</td>
+              <td><select name="propno">
+                {%for prop in properties%}
+                <option value={{prop}}> {{prop}} </option>
+                {%endfor%}
+              </select></td>
+            </tr>
+               
+               
+               <tr>
+               <td>Date</td>
+               <td> <input id="date" type="date" name="date" required/> </td>
+               </tr>
+               
+               <tr> 
+               <td>Hour</td>
+               <td > <input id="hour" type="time" name="hour" required></input> </td>
+               </tr>
+               
+               
+         
+          
+         </table> 
+           <div class="boxnewAgent">
+           <h1><br></h1>
+      <input  id="buttonSubmit" type="submit" value="  Book  " name="registerNewPerson" /> 
+      </div>
+          </form>
+          </p>
+        </div>
+        {%endif%}
+     </section>
+     <!-- <nav class ="navbar ">
+        <a href=""class="navbar-brand text-light">DreamHome</a>
+    </nav> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
+    
+
+   <footer>
+    <h1 id="footerStyle" class="text-light display-4 mt-100" style="font-size:80px">  &nbsp &nbsp&nbsp&nbsp Find your Home with the people you trust </h1>
+
+   </footer>
+  </body>
+  </html>   

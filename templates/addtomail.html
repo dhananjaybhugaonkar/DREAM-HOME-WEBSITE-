@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"type="text/css"href="{{url_for('static',filename='css/style.css')}}">
+    <title>Mailing List Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="static/css/loginStyle.css" rel="stylesheet">
+    </head>
+  <body class="bg-nav">
+
+
+    <header class="header" id="header">
+      <div class="navigation">
+        <div class="nav-center container d-flex">
+          <a href="/" class="logo"><h1>DREAM HOME</h1></a>
+
+
+
+
+
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="Login" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="AddtoMail" class="nav-link">Join</a>
+            </li>
+            <li class="nav-item">
+              <a href="BookView" class="nav-link">Book</a>
+            </li>
+            <li class="nav-item">
+              <a href="Rentals" class="nav-link">Rentals</a>
+            </li>
+
+          <div class="hamburger">
+            <i class="bx bx-menu-alt-left"></i>
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </header>
+    
+
+    <section class = "section rent">
+    
+      <div align="center">
+          <h1> Join our Mailing List! <br>
+          <div><br></div></h1>
+           <form method="post">
+            <p>{{ message }}</p>
+             <table id="agentsAdd">
+
+               <tr>
+                <label>First Name *</label><br>
+                <input type="text" name="fname" required><br>
+                <label>Last Name *</label><br>
+                <input type="text" name="lname" required><br>
+                <label>Phone Number *</label><br>
+                <input type="tel" name="telNo" required><br>
+                <label>Address *</label><br>
+                <input type="text" name="street" required><br>
+                <label>City *</label><br>
+                <input type="text" name="city" required><br>
+                <label>Postcode *</label><br>
+                <input type="text" name="PostCode" required><br>
+                <label>Email *</label><br>
+                <input type="text" name="email" required><br>
+                <label>Region</label><br>
+                <input type="text" name="region"><br>
+                <label>Rental Preference</label><br>
+                <input type="text" name="prefType"><br>
+                <label>Maximum Rent *</label><br>
+                <input type="text" name="maxRent" required><br><br>
+               </tr>
+         </table> 
+           <div class="boxnewAgent">
+           <h1><br></h1>
+      <input  id="buttonSubmit" type="submit" value="  Join  " name="registerNewPerson" /> 
+      </div>
+          </form>
+          <p class="mt-2" > Already a Member? <a href= "Login" > Login</a> 
+          </p>
+        </div>
+     </section>
+     <!-- <nav class ="navbar ">
+        <a href=""class="navbar-brand text-light">DreamHome</a>
+    </nav> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
+    
+
+   <footer>
+    <h1 id="footerStyle" class="text-light display-4 mt-100" style="font-size:80px">  &nbsp &nbsp&nbsp&nbsp Find your Home with the people you trust </h1>
+
+   </footer>
+  </body>
+  </html>   
